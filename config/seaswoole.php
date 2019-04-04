@@ -41,7 +41,7 @@ return [
     /*Server服务器配置*/
     'Server' => [
         'one' => [
-            'host' => '47.106.178.79', //服务器地址
+            'host' => '127.0.0.1', //服务器地址
             'port' => 8501, //端口
             'set' => [
                 'reactor_num' => swoole_cpu_num() * 2,

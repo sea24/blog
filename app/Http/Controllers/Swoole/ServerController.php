@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class ServerController extends BaseController
 {
     public function onReceive($server){
+        echo 6666;
         file_put_contents('/swoole.log', 123 . 'yes' . PHP_EOL, FILE_APPEND);
         /*$a = $server[0]->task($server[3]);
         print_r($a);*/

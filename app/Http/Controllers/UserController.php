@@ -15,7 +15,7 @@ class UserController
         echo "<pre>";
         print_r(config('seaswoole.Server.one'));
         $client = new \swoole_client(SWOOLE_SOCK_TCP);
-        if (!$client->connect('127.0.0.1', 8501, -1))
+        if (!$client->connect('47.106.178.79', 8509, -1))
         {
             exit("connect failed. Error: {$client->errCode}\n");
         }
