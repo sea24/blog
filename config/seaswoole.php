@@ -41,7 +41,7 @@ return [
     /*Server服务器配置*/
     'Server' => [
         'one' => [
-            'host' => '127.0.0.1', //服务器地址
+            'host' => '0.0.0.0', //服务器地址
             'port' => 8501, //端口
             'set' => [
                 'reactor_num' => swoole_cpu_num() * 2,
@@ -54,7 +54,7 @@ return [
             'notice_url' => '\App\Http\Controllers\Swoole\ServerController', //协程回调路径
             'log' => [
                 'log_file' => 'swoole',
-                'log_path' => base_path(),
+                'log_path' => base_path() . '/storage/swoole',
             ],
         ]
     ],

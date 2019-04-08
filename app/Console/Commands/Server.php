@@ -12,7 +12,7 @@ class Server extends Command
      *
      * @var string
      */
-    protected $signature = 'Swoole:Server';
+    protected $signature = 'Swoole:Server {query}';
 
     /**
      * The console command description.
@@ -38,6 +38,7 @@ class Server extends Command
      */
     public function handle()
     {
-        $SwooleServer = new SwooleServer('one');
+
+        new SwooleServer($this->argument('query'));
     }
 }
